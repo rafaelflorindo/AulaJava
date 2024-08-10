@@ -11,11 +11,13 @@ public class Cliente {
 	
 	public boolean cadastrarCliente(String nome, String telefone, 
 			String cpf, String email, LocalDate dataNascimento) {
+		
 		this.setNome(nome);
 		this.setTelefone(telefone);
 		this.setCpf(cpf);
 		this.setEmail(email);
 		this.setDataNascimento(dataNascimento);
+		
 		return true;
 	}
 	public String getNome() {

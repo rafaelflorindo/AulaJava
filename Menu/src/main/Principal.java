@@ -9,7 +9,7 @@ public class Principal {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		Cliente clienteJose = new Cliente(); 
+		Cliente cliente = new Cliente(); 
 		int opcao;
 		do {
 			System.out.println("***********************************");
@@ -23,20 +23,37 @@ public class Principal {
 
 			switch(opcao) {
 				case 1: 
+					scan.nextLine();
+					System.out.println("Informe o Nome: ");
+					String nome = scan.nextLine();
+					System.out.println("Informe o Telefone: ");
+					String telefone = scan.nextLine();
+					System.out.println("Informe o CPF: ");
+					String cpf = scan.nextLine();
+					System.out.println("Informe o E-mail: ");
+					String email = scan.nextLine();
+					System.out.println("Informe a data de Nascimento YYYY-mm-dd: ");
+					String dataNascimento = scan.nextLine();
 					
-					//System.out.println("Cadastro de cliente");
+					LocalDate dtaNascimento = 
+							LocalDate.parse(dataNascimento, DateTimeFormatter.ofPattern("yyyy-MM-dd"));		
+
+					boolean retorno = cliente.cadastrarCliente(nome, telefone, cpf, email, dtaNascimento);
 					
-					LocalDate localDate6 = LocalDate.parse("1980-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-					
-					boolean retorno = clienteJose.cadastrarCliente("José", "44 98401-4320", 
-							"123456789", "jose@gmail.com", localDate6);
 					if (retorno)
 						System.out.println("Registro efetuado com sucesso");
-				break;
+					else
+						System.out.println("Erro ao registrar o cliente!!!");
+					break;
 				case 2: System.out.println("Alterar cliente");
 				break;
-				case 3: System.out.println("Listar cliente");
-					System.out.println("Nome" + clienteJose.getNome());
+				case 3: 
+					System.out.println("Listar cliente");
+					System.out.println("Nome: " + cliente.getNome());
+					System.out.println("Telefone: " + cliente.getTelefone());
+					System.out.println("E-mail: " + cliente.getEmail());
+					System.out.println("CPF: " + cliente.getCpf());
+					System.out.println("Data Nascimento: " + cliente.getDataNascimento());
 				break;
 				case 4: System.out.println("Saindo do Sistema");
 				break;
@@ -46,3 +63,4 @@ public class Principal {
 		scan.close();
 	}
 }
+
