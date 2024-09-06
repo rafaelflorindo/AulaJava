@@ -1,22 +1,24 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Main {
-    public static void main(String[] args) {
-        LocalDate dtaNascimento =
-                LocalDate.parse("1982-12-02", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        LocalDate dtaAdmissao =
-                LocalDate.parse("2024-09-15", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    public static void main(String[] args) throws ParseException {
+        String dtaNascimento = "02/12/1982";
+        String dtaAdmissao = "20/10/2023";
 
-        //Pessoa p = new Pessoa("Rafael", "123456789", "02/12/1982");
-        Aluno a = new Aluno("Alana", "67154589", dtaNascimento, "00001");
-        System.out.println(a);
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataNascimento = formato.parse(dtaNascimento);
+        Date dataAdmissao = formato.parse(dtaAdmissao);
 
-        Professor p = new Professor("Rafael", "123456789", dtaNascimento, "POO", 400.57);
-        System.out.println(p);
+        Aluno alunoAlana = new Aluno("Alana", "67154589", dataNascimento, "00001");
+        Professor professorRafael = new Professor("Rafael", "123456789", dataNascimento, "POO", 0.0);
+        Funcionario funcionarioJussara = new Funcionario("Jussara", "741258",dataNascimento, 7895.66, dataAdmissao, "RH");
 
-        Funcionario f = new Funcionario("Jussara", "741258",dtaNascimento, 7895.66, dtaAdmissao, "RH");
-        System.out.println(f);
+        System.out.println(alunoAlana);
+        System.out.println(professorRafael);
+        System.out.println(funcionarioJussara);
     }
 }

@@ -1,10 +1,10 @@
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Professor extends Pessoa {
     public String disciplina;
     public Double salario;
 
-    public Professor(String nome, String cpf, LocalDate dataNascimento, String disciplina, Double salario) {
+    public Professor(String nome, String cpf, Date dataNascimento, String disciplina, Double salario) {
         super(nome, cpf, dataNascimento);
         this.setDisciplina(disciplina);
         this.setSalario(salario);
@@ -22,8 +22,12 @@ public class Professor extends Pessoa {
         return salario;
     }
 
-    public void setSalario(Double salario) {
-        this.salario = salario;
+    public boolean setSalario(Double salario) {
+        if(salario>0) {
+            this.salario = salario;
+            return true;
+        }
+        return false;
     }
 
     @Override
