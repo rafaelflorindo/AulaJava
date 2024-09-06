@@ -1,7 +1,9 @@
+import java.time.LocalDate;
+
 public class Aluno extends Pessoa{
     public String matricula;
 
-    public Aluno(String nome, String cpf, String dataNascimento, String matricula) {
+    public Aluno(String nome, String cpf, LocalDate dataNascimento, String matricula) {
         super(nome, cpf, dataNascimento);
         this.setMatricula(matricula);
     }
@@ -17,10 +19,10 @@ public class Aluno extends Pessoa{
     @Override
     public String toString() {
         return "Aluno{" +
-                "matricula='" + matricula + '\'' +
-                ", nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
+                "matricula='" + this.getMatricula() + '\'' +
+                ", nome='" + this.getNome() + '\'' +
+                ", cpf='" + this.getCpf() + '\'' +
+                ", dataNascimento='" + this.getDataNascimento() + '\'' +
                 '}';
     }
 }

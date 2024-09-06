@@ -1,9 +1,11 @@
+import java.time.LocalDate;
+
 public class Funcionario extends Pessoa{
     public Double salario;
-    public String dataAdmissao;
+    public LocalDate dataAdmissao;
     public String cargo;
 
-    public Funcionario(String nome, String cpf, String dataNascimento, Double salario, String dataAdmissao, String cargo) {
+    public Funcionario(String nome, String cpf, LocalDate dataNascimento, Double salario, LocalDate dataAdmissao, String cargo) {
         super(nome, cpf, dataNascimento);
         this.setCargo(cargo);
         this.setSalario(salario);
@@ -18,11 +20,11 @@ public class Funcionario extends Pessoa{
         this.salario = salario;
     }
 
-    public String getDataAdmissao() {
+    public LocalDate getDataAdmissao() {
         return dataAdmissao;
     }
 
-    public void setDataAdmissao(String dataAdmissao) {
+    public void setDataAdmissao(LocalDate dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
 
