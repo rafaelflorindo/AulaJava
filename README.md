@@ -8,13 +8,22 @@
 
 
 # :hammer: Funcionalidades
+- `Introdução a Linguagem Java:` Comandos de entrada e saída, operadores, Estrutura de Condição, Estrutura de Repetição
+- `POO:` Introdução Programação Orientada a Objetos
+- `A1`: Classes, Objetos, Atributos e Métodos
+- `A2`: Pilar: Abstração e Encapsulamento, visibilidade e Métodos assessores
+- `A3:` Classe Scanner
+- `A4:` Array e colection
+- `A5:` Projetos com menu
+- `A6:` Pilar: Herança
+- `A7:` Pilar: Encapsulamento
 
-- `APS_Aula_01`: Introdução a Linguagem Java, operadores, classes, objetos e atributos
-- `APS_Aula_02`: Classe, Métodos assessores e scanner
-
-
-- Tecnologia
+# :hammer: Tecnologias utilizadas
 <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40"/> 
+
+# :hammer: IDES utilizadas
+<img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" width="40" height="40"/> 
+<img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="40" height="40"/> 
 
 
 <div>
